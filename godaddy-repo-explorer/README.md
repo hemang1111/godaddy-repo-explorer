@@ -1,16 +1,37 @@
-# React + Vite
+# 🌐 GoDaddy Repo Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive web app built with **React**, **Vite**, **Redux Toolkit**, and **Tailwind CSS** to explore GoDaddy's public GitHub repositories.  
+It fetches data from the [GitHub API](https://api.github.com/orgs/godaddy/repos) and displays repository information in a clean, modern UI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
+- 🔍 **Fetch & Display** all GoDaddy repositories
+- 📄 **Detailed View** with description, languages, forks, issues & watchers
+- 💫 **Responsive Design** with Tailwind CSS -- fully responsive for any device from mobile to 4k screen
+- ⚙️ **Redux Toolkit** for state management
+- 🧪 Basic unit tests for core components
 
-## React Compiler
+NOTE :- Open this App in Light mode for better Experience , not managed 100% in dark mode. 
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🧰 Tech Stack
+- **React 19 (Vite)**
+- **Tailwind CSS**
+- **Redux Toolkit**
+- **RSuite UI** for modals & drawer
+- **GitHub REST API**
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📦 Installation & Setup
+
+```bash
+# Clone the repo
+git clone https://github.com/yourusername/godaddy-repo-explorer.git
+
+# Install dependencies
+npm install -f
+
+# Run locally
+npm run dev
