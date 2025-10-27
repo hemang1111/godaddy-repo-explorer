@@ -1,0 +1,23 @@
+html, #root {
+  height : 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--dark);
+  color: var(--gray-200);
+}
+
+body{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--dark);
+  color: var(--gray-200);
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
