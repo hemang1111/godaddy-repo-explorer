@@ -24,6 +24,7 @@ NOTE :- Open this App in Light mode for better Experience , not managed 100% in 
 
 ---
 
+
 ## 📦 Installation & Setup
 
 ```bash
@@ -35,3 +36,38 @@ npm install -f
 
 # Run locally
 npm run dev
+
+
+🧪 Testing Setup
+🧩 Libraries Used
+
+Jest → Testing framework
+
+React Testing Library → Component testing utilities
+
+@testing-library/jest-dom → Custom DOM matchers
+
+⚙️ Setup & Run Tests
+# Run all tests
+npm test
+
+# Or run in watch mode
+npm test -- --watch
+
+🧠 Test Cases Added
+
+The test suite currently includes unit and behavior tests for RepoCard and related components:
+
+✅ Drawer opens correctly when a repository card is clicked
+
+✅ Drawer content matches the selected repository data
+
+✅ Drawer closes when the close button is clicked (.rs-drawer-header-close)
+
+✅ Search Input (Negative Case): filters out results for invalid search queries
+
+✅ Search Input (Positive Case): correctly filters repositories by matching names
+
+✅ Refresh Button: triggers re-fetch of repositories and updates the list
+
+🧪 All components use accessible data-testid attributes for reliable querying during tests.
