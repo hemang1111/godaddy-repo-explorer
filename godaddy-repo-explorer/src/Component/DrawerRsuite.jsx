@@ -13,6 +13,7 @@ const DrawerRsuite = (props) => {
         placement={props.placement || 'right'}
         backdrop={props.backdrop || true}
         style={props.style || {}}
+        data-testid={props.testid || ''}
       >
 
         <Drawer.Header>

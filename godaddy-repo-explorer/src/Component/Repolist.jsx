@@ -37,9 +37,10 @@ function Repolist({ fetchData, listRepoShimmer , setListRepoShimmer}) {
             <>
                 <div className='w-[100%]'>
                     <div className='flex justify-center m-2 p-2'>
-                        <input disabled={listRepoShimmer} className='min-w-[50%] w-auto p-1 rounded-md border border-[var(--godaddy-blue)] focus:outline focus:outline-5 outline-[var(--godaddy-blue)]' title="Search repo name / descripiton" placeholder='Search repo name / descripiton' value={serchValue} onChange={listRepoShimmer ? ()=>{} : (e) => { handleChange(e.target?.value) }} />
+                        <input data-testid="search-input" disabled={listRepoShimmer} className='min-w-[50%] w-auto p-1 rounded-md border border-[var(--godaddy-blue)] focus:outline focus:outline-5 outline-[var(--godaddy-blue)]' title="Search repo name / descripiton" placeholder='Search repo name / descripiton' value={serchValue} onChange={listRepoShimmer ? ()=>{} : (e) => { handleChange(e.target?.value) }} />
                         <TooltipRsuite tooltipcontent="Refresh" placement="top">
                             <div className={`ml-2 bg-[var(--godaddy-blue)] rounded-md `} 
+                            data-testid="refresh-btn"
                                 onClick={
                                     listRepoShimmer ?
                                     ()=>{}
@@ -78,7 +79,7 @@ function Repolist({ fetchData, listRepoShimmer , setListRepoShimmer}) {
 
                                 finalRepoList?.map((repo, index) => {
                                     return (
-                                        <RepoCard repo={repo} index={index} handleDrawer={handleDrawer} openDrawer={openDrawer} />
+                                        <RepoCard repo={repo} handleDrawer={handleDrawer} openDrawer={openDrawer} key={repo.id} />
                                     )
                                 })
                         }
@@ -91,6 +92,7 @@ function Repolist({ fetchData, listRepoShimmer , setListRepoShimmer}) {
                     size="xs"
                     onClose={() => { setOpenDrawer({}) }}
                     className="p-0"
+                    testid="repo-drawer"
                     header={
                         <div className='flex items-center justify-start truncate'>
                             <div className='text-sm text-gray-700 min-w-[60px]'>Details of</div>
@@ -101,7 +103,7 @@ function Repolist({ fetchData, listRepoShimmer , setListRepoShimmer}) {
                         }
                     body={
                         <>
-                            <div className='w-[100%] font-normal text-md'>
+                            <div className='w-[100%] font-normal text-md' >
                                 {/********************************* Description Start **********************************/}
                                 <div className='flex border-b border-gray-200'>
                                     <TooltipRsuite tooltipcontent="Description" placement="top">
