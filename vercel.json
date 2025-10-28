@@ -1,0 +1,6 @@
+{
+  "buildCommand": "npm i -f && npm run build",
+  "installCommand": "npm i -f",
+  "outputDirectory": "dist",
+  "framework": "vite"
+}
