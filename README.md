@@ -17,9 +17,10 @@ NOTE :- Open this App in Light mode for better Experience , not managed 100% in 
 
 ## 🧰 Tech Stack
 - **React 19 (Vite)**
-- **Tailwind CSS**
-- **Redux Toolkit**
+- **Tailwind CSS** for desinging 
+- **Redux Toolkit** for managing data flow in app
 - **RSuite UI** for modals & drawer
+- **JEST** for writing unit testcases
 - **GitHub REST API**
 
 ---
